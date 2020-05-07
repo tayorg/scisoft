@@ -1,6 +1,6 @@
 #!/bin/bash
 #=============================================================================
-#title           : scisoft_installer.
+#title           : scisoft_installer for ESO scisoft software collection.
 #description     : This script will install scisoft to GNU/Linux, macOS.
 #author		     : @yucelkilic and @korhanyelkenci from TAY Platform (bilgi@tay.org.tr) 
 #date            : May 7th, 2020
