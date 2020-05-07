@@ -7,6 +7,7 @@
 #version         : 0.1    
 #usage		     : bash scisoft_installer.sh
 #source          : http://cosmology.istanbul.edu.tr/index.php/members/installation-of-scisoft/
+#reference       : https://www.eso.org/sci/software/scisoft/
 #=============================================================================
 
 function getScisoft() {
