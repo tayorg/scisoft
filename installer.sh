@@ -71,7 +71,6 @@ echo "Installation script running for: " ${machine}
 
 if [ ${machine} == "Mac" ]; then
     runMacScript
-    echo "djdsaljk"
 elif [ ${machine} == "Linux" ] || [ ${machine} == "Cygwin" ]; then
     runLinuxScript
 else
