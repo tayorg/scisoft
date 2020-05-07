@@ -1,0 +1,75 @@
+# External (non core-system) packages.  To install a new package, add the
+# two statements to define the package root directory and package task,
+# then add the package helpdb to the `helpdb' list.
+
+reset	extern		= iraf$extern/
+
+reset	noao		= iraf$noao/
+task	noao.pkg	= noao$noao.cl
+
+reset	vo		= iraf$vo/
+task	vo.pkg		= vo$vo.cl
+
+#reset	local		= iraf$local/
+#task	local.pkg	= local$local.cl
+
+
+# Manually defined external packages.  Packages installed in the iraf$extern
+# directory will be loaded dynamically, other packages may be defined here
+# if for some reason they are non-standard and cannot be loaded dynamically. 
+#
+# Package definitions have the form:
+#
+#   reset example	= extern$example/	   <--- must have trailing '/'
+#   task  example.pkg	= example$example.cl
+#
+# Note the 'helpdb' string below must also be modified.
+
+reset   gmisc         = /usr/local/scisoft/packages/iraf/extern/gmisc/
+task    gmisc.pkg      = gmisc$gmisc.cl
+
+reset   nlocal         = /usr/local/scisoft/packages/iraf/extern/nlocal/
+task    nlocal.pkg      = nlocal$nlocal.cl
+
+reset   nmisc         = /usr/local/scisoft/packages/iraf/extern/nmisc/
+task    nmisc.pkg      = nmisc$nmisc.cl
+
+reset   rvsao         = /usr/local/scisoft/packages/iraf/extern/rvsao/
+task    rvsao.pkg      = rvsao$rvsao.cl
+
+# Edited by TAY Platform Team on 7 May 2020
+# if (!defvar("helpdb")) {
+#     reset helpdb=""
+# }
+# ;
+
+
+# Initialize the helpdb string.  We'll add to this when dyanamically 
+# loading packages when the next load the CLPACKAGE.
+reset	helpdb		= "lib$helpdb.mip\
+			  ,noao$lib/helpdb.mip\
+			  ,vo$lib/helpdb.mip\
+                          ,gmisc$lib/helpdb.mip\
+                          ,nlocal$lib/helpdb.mip\
+                          ,nmisc$lib/helpdb.mip\
+                          ,rvsao$lib/helpdb.mip\
+			  "
+
+reset   tables          = /usr/local/scisoft/packages/iraf/extern/stsci_iraf-3.16/tables/
+task    tables.pkg      = tables$tables.cl
+if (access("tables$lib")) reset helpdb= ( envget("helpdb") + ",tables$lib/helpdb.mip" )  
+
+reset   stsdas          = /usr/local/scisoft/packages/iraf/extern/stsci_iraf-3.16/stsdas/
+task    stsdas.pkg      = stsdas$stsdas.cl
+task    apropos         = stsdas$apropos.cl
+if (access("stsdas$lib")) reset helpdb= ( envget("helpdb") + ",stsdas$lib/helpdb.mip" )  
+
+reset   stecf           = /usr/local/scisoft/packages/iraf/extern/stsci_iraf-3.16/stecf/
+task    stecf.pkg       = stecf$stecf.cl
+if (access("stecf$lib"))  reset helpdb= ( envget("helpdb") + ",stecf$lib/helpdb.mip" )  
+
+print ""	# work around bug in CL parser
+
+# Do not modify below this line!
+clpackage
+keep
