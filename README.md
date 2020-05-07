@@ -2,7 +2,7 @@
 
 ### Installation
 
-Download or clone the @tayorg/scisoft repository and type the following:
+Download or clone the @tayorg/scisoft repository and type the following commands from terminal:
 
 1. `git clone https://github.com/tayorg/scisoft.git`
 
@@ -12,7 +12,7 @@ Download or clone the @tayorg/scisoft repository and type the following:
 
 4. `./installer.sh`
    
-   Please wait until the tarball file is downloaded. Please enter the administrator password when prompted during installation prosess. pplications/
+   Please wait until the tarball file is downloaded. Please enter the administrator password when prompted during installation process. 
 
 5. Now, run `ecl` command from terminal.
 
