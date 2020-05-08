@@ -14,7 +14,7 @@ Download or clone the @tayorg/scisoft repository and type the following commands
    
    Please wait until the tarball file is downloaded. Please enter the administrator password when prompted during installation process. 
 
-5. First mkiraf, then run `ecl` command from terminal (X terminal).
+5. First `mkiraf`, then run `ecl` command from terminal (X terminal).
 
 ### Known isues
 
