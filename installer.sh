@@ -1,12 +1,13 @@
 #!/bin/bash
 #=============================================================================
-#title           : scisoft_installer.
-#description     : This script will install scisoft to GNU/Linux, macOS OSs.
-#author		 : @yucelkilic and @korhanyelkenci from TAY Platform (bilgi@tay.org.tr) 
-#date            : 7 May 2020
+#title           : scisoft_installer for ESO scisoft software collection.
+#description     : This script will install scisoft to GNU/Linux, macOS.
+#author		     : @yucelkilic and @korhanyelkenci from TAY Platform (bilgi@tay.org.tr) 
+#date            : May 7th, 2020
 #version         : 0.1    
-#usage		 : bash scisoft_installer.sh
+#usage		     : bash scisoft_installer.sh
 #source          : http://cosmology.istanbul.edu.tr/index.php/members/installation-of-scisoft/
+#reference       : https://www.eso.org/sci/software/scisoft/
 #=============================================================================
 
 function getScisoft() {
